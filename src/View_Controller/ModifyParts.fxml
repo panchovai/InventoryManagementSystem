@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyPartsController">
+    <children>
+        <Label layoutX="47.0" layoutY="20.0" text="Modify Part" textFill="#3c2ba4">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="modifyPartsInHouseRadioButton" disable="true" layoutX="152.0" layoutY="22.0" mnemonicParsing="false" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="toggleGroupForRadioButtons" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="modifyPartsOutsourcedRadioButton" disable="true" layoutX="261.0" layoutY="22.0" mnemonicParsing="false" text="Outsourced" toggleGroup="$toggleGroupForRadioButtons" />
+        <Label layoutX="60.0" layoutY="80.0" text="ID" />
+        <Label fx:id="modifyPartNameOrMachineID" layoutX="55.0" layoutY="132.0" text="Name" />
+        <Label layoutX="57.0" layoutY="175.0" text="Inv" />
+        <Label layoutX="54.0" layoutY="215.0" text="Price/Cost" />
+        <Label layoutX="60.0" layoutY="261.0" text="Max" />
+        <Label layoutX="190.0" layoutY="261.0" text="Min" />
+        <Label fx:id="modifyPartCompanyNameOrMachineID" layoutX="57.0" layoutY="304.0" text="Company Name" />
+        <Button fx:id="modifyPartSaveButton" layoutX="237.0" layoutY="354.0" mnemonicParsing="false" onAction="#saveModifiedPartAction" prefHeight="27.0" prefWidth="61.0" text="Save" />
+        <Button fx:id="modifyPartCancelButton" layoutX="310.0" layoutY="354.0" mnemonicParsing="false" onAction="#modifyPartsCancelledAction" text="Cancel" />
+        <TextField fx:id="modifyPartIDTextField" layoutX="150.0" layoutY="75.0" text="AutoGen-Disabled" />
+        <TextField fx:id="modifyPartNameTextField" layoutX="150.0" layoutY="127.0" promptText="Part Name" />
+        <TextField fx:id="modifyPartInvTextField" layoutX="150.0" layoutY="170.0" promptText="Inv" />
+        <TextField fx:id="modifyPartPriceTextField" layoutX="150.0" layoutY="210.0" promptText="Price/Cost" />
+        <TextField fx:id="modifyPartMaxTextField" layoutX="93.0" layoutY="256.0" prefHeight="27.0" prefWidth="81.0" promptText="Max" />
+        <TextField fx:id="modifyPartMinTextField" layoutX="237.0" layoutY="256.0" prefHeight="27.0" prefWidth="81.0" promptText="Min" />
+        <TextField fx:id="modifyPartCompanyNameOrMachineIDTextField" layoutX="158.0" layoutY="299.0" prefHeight="27.0" prefWidth="159.0" promptText="Company Name" />
+    </children>
+</AnchorPane>
